@@ -10,11 +10,12 @@ public class GuessNumberTest {
         //given
         String userAnswer = "1234";
         String gameAnsewr = "1234";
+        String Expected = "4A0B";
         GuessNumber guessNumber = new GuessNumber();
         //when
         String result =guessNumber.answer(userAnswer,gameAnsewr);
         //then
-        assertEquals(result,gameAnsewr);
+        assertEquals(result,Expected);
 
     }
 }
