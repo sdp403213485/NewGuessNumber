@@ -43,4 +43,17 @@ public class GuessNumberTest {
         //then
         assertEquals(Expected,result);
     }
+
+    @Test
+    public void should_return_2A2B_when_input_1243_given_1234(){
+        //given
+        String userAnswer = "1243";
+        String gameAnsewr = "1234";
+        String Expected = "2A2B";
+        GuessNumber guessNumber = new GuessNumber();
+        //when
+        String result =guessNumber.answer(userAnswer,gameAnsewr);
+        //then
+        assertEquals(Expected,result);
+    }
 }
