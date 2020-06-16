@@ -14,13 +14,24 @@ public class GuessNumber {
         System.out.print(Output);
     }
 
+    public String CheckInput(String userAnswer) {
+        int length=4;
+        if (userAnswer.length() != length ){
+            return "WrongInput";
+        }
+        return userAnswer;
+    }
 
     public String answer(String userAnswer, String gameAnsewr) {
         String Output = null;
-        int ANum=this.ACheckNumber(userAnswer,gameAnsewr);
-        int BNum=this.BCheckNumber(userAnswer,gameAnsewr);
-        Output = ANum+"A"+BNum+"B";
-        return Output;
+        if(this.CheckInput(userAnswer).equalsIgnoreCase("WrongInput")){
+            return "WrongInput";
+        }else{
+            int ANum=this.ACheckNumber(userAnswer,gameAnsewr);
+            int BNum=this.BCheckNumber(userAnswer,gameAnsewr);
+            Output = ANum+"A"+BNum+"B";
+            return Output;
+        }
     }
 
     public int ACheckNumber(String userAnswer, String gameAnsewr){

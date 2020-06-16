@@ -82,4 +82,17 @@ public class GuessNumberTest {
         //then
         assertEquals(Expected,result);
     }
+
+    @Test
+    public void should_return_WrongInput_when_input_123_given_1234(){
+        //given
+        String userAnswer = "123";
+        String gameAnsewr = "1234";
+        String Expected = "WrongInput";
+        GuessNumber guessNumber = new GuessNumber();
+        //when
+        String result =guessNumber.answer(userAnswer,gameAnsewr);
+        //then
+        assertEquals(Expected,result);
+    }
 }
