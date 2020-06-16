@@ -1,6 +1,20 @@
 package com.twschool.practice;
 
+
+import java.util.Scanner;
+
 public class GuessNumber {
+    public static void main(String[]args){
+        String gameAnsewr ="1234";
+        Scanner input=new Scanner(System.in);
+        String userAnswer=input.next();
+
+        GuessNumber guessNumber = new GuessNumber();
+        String Output = guessNumber.answer(userAnswer,gameAnsewr);
+        System.out.print(Output);
+    }
+
+
     public String answer(String userAnswer, String gameAnsewr) {
         String Output = null;
         int ANum=this.ACheckNumber(userAnswer,gameAnsewr);
