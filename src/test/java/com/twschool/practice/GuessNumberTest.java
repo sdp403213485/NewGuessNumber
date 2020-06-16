@@ -16,6 +16,18 @@ public class GuessNumberTest {
         String result =guessNumber.answer(userAnswer,gameAnsewr);
         //then
         assertEquals(result,Expected);
+    }
 
+    @Test
+    public void should_return_0A4B_when_input_5678_given_1234(){
+        //given
+        String userAnswer = "5678";
+        String gameAnsewr = "1234";
+        String Expected = "0A4B";
+        GuessNumber guessNumber = new GuessNumber();
+        //when
+        String result =guessNumber.answer(userAnswer,gameAnsewr);
+        //then
+        assertEquals(result,Expected);
     }
 }

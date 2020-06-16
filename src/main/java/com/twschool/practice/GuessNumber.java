@@ -21,6 +21,15 @@ public class GuessNumber {
     }
 
     public int BCheckNumber(String userAnswer, String gameAnsewr){
+        int BNum = 0;
+        for(int i = 0; i < userAnswer.length(); i++) {
+            char c = userAnswer.charAt(i);
+            for(int j = 0; j < userAnswer.length(); j++) {
+                if( c == gameAnsewr.charAt(j)){
+                    BNum = BNum + 1;
+                }
+            }
+        }
         return 0;
     }
 
